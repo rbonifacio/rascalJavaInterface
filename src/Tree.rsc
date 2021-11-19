@@ -23,12 +23,15 @@ test bool testCreateValues() {
    
    Either e1 = left(1); 
    Either e2 = left(2); 
+   Either e3 = right("foo");
    
    println("Note: "); 
-   println("- e1 = <e1> and v[0] = <v[0]>. However test e1 == v[0] leads to <e1 == v[0]>"); 
-   println("- e2 = <e2> and v[1] = <v[1]>. However test e2 == v[1] leads to <e2 == v[1]> \n"); 
+   println("- e1 = <e1> and v[0] = <v[0]>. Test e1 == v[0] leads to <e1 == v[0]>"); 
+   println("- e2 = <e2> and v[1] = <v[1]>. Test e2 == v[1] leads to <e2 == v[1]>"); 
+   println("- e3 = <e3> and v[2] = <v[2]>. Test e3 == v[2] leads to <e2 == v[1]> \n"); 
+   
    println("The test e1 := v[0] also leads to <e1 := v[0]>. \n"); 
    
    
-   return v[0] == e1 && v[1] == e2; 
+   return v[0] == e1 && v[1] == e2 && v[2] == e3; 
 }
