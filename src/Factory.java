@@ -35,11 +35,11 @@ public class Factory {
 	}
 	
 	private Type left() {
-		return tf.constructor(ts, getVallangType("Either"), "left");
+		return tf.constructor(ts, getVallangType("Either"), "left", tf.integerType());
 	}
 	
 	private Type right() {
-		return tf.constructor(ts, getVallangType("Either"), "right");
+		return tf.constructor(ts, getVallangType("Either"), "right", tf.stringType());
 	}
 	
 	private Type getVallangType(String baseType) {
